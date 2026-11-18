@@ -7,14 +7,14 @@
       link.href = `mailto:${email}`;
       link.textContent = email;
       node.replaceChildren(link);
-    } else {
-      node.textContent = "公開前TODO：site/config.js に問い合わせ先メールアドレスを設定してください。";
     }
   });
   document.querySelectorAll("[data-operator]").forEach((node) => {
-    node.textContent = (config.operatorName || "").trim() || "公開前TODO：site/config.js に運営者名を設定してください。";
+    const operator = (config.operatorName || "").trim();
+    if (operator) node.textContent = operator;
   });
   document.querySelectorAll("[data-effective-date]").forEach((node) => {
-    node.textContent = (config.effectiveDate || "").trim() || "公開前TODO：site/config.js に発効日を設定してください。";
+    const effectiveDate = (config.effectiveDate || "").trim();
+    if (effectiveDate) node.textContent = effectiveDate;
   });
 })();

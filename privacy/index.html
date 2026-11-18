@@ -11,22 +11,24 @@
   <header class="topbar"><div class="topbar-inner"><a class="brand" href="../"><svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M7 6v11.5a9 9 0 0 0 18 0V6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="7" cy="6" r="3" fill="currentColor"/><circle cx="25" cy="6" r="3" fill="#E5A64C"/></svg>Unfold</a><nav aria-label="メインナビゲーション"><a href="../support/">サポート</a><a href="./" aria-current="page">プライバシー</a></nav></div></header>
   <main id="main" class="content">
     <p class="eyebrow">Privacy</p><h1>プライバシーポリシー</h1>
-    <p class="meta">対象：Unfold iOSアプリ ／ 発効日：<span data-effective-date>公開前TODO：発効日を設定してください。</span></p>
-    <div class="callout"><strong>公開前に運営者情報の確定が必要です</strong>以下は2026年11月18日時点のアプリ実装と設定を確認して作成したドラフトです。運営者名、問い合わせ先、発効日を設定し、App Store Connectのプライバシー申告と広告SDKの最終設定を照合してから公開してください。</div>
-    <h2>運営者・お問い合わせ</h2><p>運営者：<span data-operator>公開前TODO：運営者名を設定してください。</span></p><p>お問い合わせ：<span data-support-email>公開前TODO：問い合わせ先を設定してください。</span></p>
+    <p class="meta">対象：Unfold iOSアプリ ／ 発効日：<span data-effective-date>2026年11月18日</span></p>
+    <p class="lede">Unfoldは、利用者のプライバシーを尊重し、アプリの機能に必要な範囲で情報を取り扱います。本ポリシーは、アプリ、サポート窓口、および本サイトにおける情報の取扱いを説明するものです。</p>
+    <h2>運営者・お問い合わせ</h2><p>運営者：<span data-operator>Unfold</span></p><p>お問い合わせ：<span data-support-email><a href="mailto:unfold.app.info@gmail.com">unfold.app.info@gmail.com</a></span></p>
     <h2>アプリが扱う情報と利用目的</h2>
     <h3>位置情報・移動記録</h3><p>行き先を決めるときは、現在地を起点として一度取得し、候補を計算するために使います。開拓地図では、許可されている場合に現在地マーカーの表示と地図の中心移動に使います。ユーザーが移動記録を開始した場合は、緯度・経度、時刻、位置精度、高度、速度、進行方向など取得できた位置情報を記録し、履歴表示と地図の開拓に使います。バックグラウンド取得は明示的な記録中に行います。位置情報の取得・精度・継続は端末や環境、iOSの状態により変わります。</p>
     <h3>端末内に保存する情報</h3><p>移動記録、GPS点、開拓マス、保存した行きたい候補、設定値、購入権利の判定に必要な商品・取引状態をアプリ内の端末保存領域またはAppleのStoreKitから取得して利用します。Unfold独自のアカウント、運営者のアプリサーバー、独自のクラウド同期は実装していません。移動記録中は、最後に受理した位置1点と更新時刻をWidget表示のためApp Group経由で端末内共有します。Core Motionによる移動開始リマインダーをユーザーが有効にした場合、活動状態を端末内で判定し、ローカル通知に利用します。</p>
     <h3>地図・Appleのサービス</h3><p>地図表示にMapKitを使用し、経路案内を選ぶとApple Mapsへ目的地座標を渡します。地図表示や経路案内では、地図の表示範囲、目的地、許可された位置情報等がAppleのサービスで処理される場合があります。これは運営者のサーバーへの送信とは別です。詳しくは<a href="https://www.apple.com/legal/privacy/data/en/apple-maps/">Apple Mapsとプライバシー</a>をご確認ください。</p>
     <h3>広告・同意管理（Google Mobile Ads / UMP）</h3><p>アプリにはGoogle Mobile Ads SDK 13.12.0とUser Messaging Platform 3.1.0を組み込んでいます。アプリ設定では広告SDKの概略位置情報の自動収集を無効にし、パーソナライズ広告を無効にする設定を行い、広告リクエスト前にUMPの同意状態を確認します。GPSの正確な座標、移動履歴、開拓マス、行き先座標を広告リクエストに含めない実装です。</p>
-    <p>一方、Google Mobile Ads SDKの同梱Privacy Manifestは、SDKが処理し得るデータ種別として端末ID、概略位置、診断・性能、広告データ、製品利用情報等を宣言しています。manifestの宣言は、すべての情報がすべての利用者から常に収集されることを意味しません。実際の処理はSDK、同意状態、地域、広告設定に依存します。非パーソナライズ設定や概略位置収集の無効化だけで、すべての収集がないことやATTが不要であることを断定しません。詳細は<a href="https://developers.google.com/admob/ios/privacy/data-disclosure">GoogleのMobile Adsデータ開示</a>と<a href="https://developers.google.com/admob/ios/privacy">UMPの説明</a>をご確認ください。</p>
-    <p>2026年11月18日に確認したXcode設定では、Debug/Releaseとも広告モードはテストで、本番広告の有効化フラグはオフです。その設定で作成したビルドはGoogleのテスト広告を使う構成です。提出ビルド前に設定が変更された場合は、この記載も更新します。</p><p><strong>公開前TODO：</strong>AdMob本番配信の有効化状態、UMPの地域別メッセージ、Googleの最新データ開示、ATT要否、App Store ConnectのApp Privacy回答を実際の提出ビルドと照合してください。これらが確定するまでは、SDKの本番広告配信を有効にしない運用です。</p>
+    <p>Google Mobile Ads SDKは、広告の配信、効果測定、不正防止、サービス改善等のため、IPアドレス、端末識別子、広告データ、製品操作、クラッシュログ、パフォーマンス情報等を処理する場合があります。実際に処理される情報は、地域、端末設定、同意状態、広告設定等により異なります。詳しくは<a href="https://developers.google.com/admob/ios/privacy/data-disclosure">GoogleのMobile Adsデータ開示</a>、<a href="https://developers.google.com/admob/ios/privacy">UMPの説明</a>、<a href="https://policies.google.com/privacy">Googleプライバシーポリシー</a>をご確認ください。</p>
+    <p>地域や法令に応じて同意画面が表示される場合があります。広告のプライバシー設定が必要な場合は、アプリの「設定」から選択内容を確認・変更できます。現在のアプリはApp Tracking Transparencyの許可を要求せず、パーソナライズ広告を有効にしていません。将来、トラッキングを伴う広告利用へ変更する場合は、必要な許可を取得し、本ポリシーとApp Store上の表示を事前に更新します。Plusまたは広告削除の権利が有効な場合、アプリは広告をリクエストしません。</p>
     <h3>購入（StoreKit 2）</h3><p>アプリ内購入はApple StoreKit 2を利用します。支払い方法やカード情報はAppleが処理し、Unfoldはそれらを取得しません。アプリは購入商品IDや検証済み取引の権利状態を端末上で確認し、Plus機能や広告表示の制御に使います。運営者独自の購入サーバーへの取引送信は実装していません。購入・返金・請求の管理はAppleのアカウント機能をご利用ください。</p>
-    <h2>保存期間と削除</h2><p>移動記録と開拓エリアは、利用者がアプリ内で削除するかアプリを削除するまで端末内に保持します。「設定」から移動記録と開拓エリアをまとめて削除でき、保存候補は候補一覧から削除できます。アプリ独自のクラウド同期はありません。iOSバックアップへの含有や端末移行時の復元はiOSの設定・動作に依存し、個別に保証していません。購入権利やサブスクリプションはアプリ内データ削除とは別にApple Accountで管理されます。</p>
-    <h2>位置情報の許可</h2><p>位置情報は機能の利用時にiOSの許可を求めます。移動記録はユーザーの明示操作で開始・終了し、記録時の権限は「このAppの使用中」を基本とします。許可はiPhoneの「設定」から変更できます。権限を拒否・変更すると、現在地取得や移動記録など一部機能を利用できません。アプリを強制終了した後の記録継続は保証されません。</p>
+    <h3>お問い合わせで受け取る情報</h3><p>サポート窓口へメールを送信した場合、メールアドレス、本文、および利用者が任意で記載した端末・OS・アプリの情報を、問い合わせへの回答と問題調査のために利用します。正確なGPS座標、移動履歴、購入情報など、問い合わせの解決に不要な情報は送信しないでください。</p>
+    <h2>保存期間と削除</h2><p>移動記録と開拓エリアは、利用者がアプリ内で削除するかアプリを削除するまで端末内に保持します。「設定」から移動記録と開拓エリアをまとめて削除でき、保存候補は候補一覧から個別に削除できます。アプリ独自のクラウド同期はありません。iOSバックアップへの含有や端末移行時の復元はiOSの設定・動作に依存します。購入権利やサブスクリプションはアプリ内データ削除とは別にApple Accountで管理されます。</p>
+    <p>サポートメールは、回答、問題調査、および対応記録のために必要な期間保持し、その後削除します。利用者はお問い合わせ先へ連絡することで、自身が送信したサポートメールの削除を依頼できます。ただし、法令上の義務または紛争対応のために保持が必要な場合を除きます。</p>
+    <h2>許可と選択の変更</h2><p>位置情報、モーション、通知は、それぞれの機能を利用する際にiOSの許可を求めます。移動記録は利用者の明示操作で開始・終了し、位置情報の権限は「このAppの使用中」を基本とします。各許可はiPhoneの「設定」から変更できます。権限を拒否・変更すると、現在地取得、移動記録、移動開始のお知らせなど一部機能を利用できません。アプリを強制終了した後の記録継続は保証されません。広告同意の選択肢が提供される地域では、アプリ内の「広告プライバシー設定」から選択を変更できます。</p>
+    <h2>外部サービス</h2><p>Unfoldは、地図・経路案内・購入にAppleのサービス、広告配信・同意管理にGoogleのサービス、サイト配信にGitHub Pages、サポートメールにGoogleのGmailを利用します。各事業者は、それぞれのプライバシーポリシーと適用法令に従って情報を取り扱います。Unfoldは、利用する外部サービスに対し、本ポリシーおよび適用される要件に沿った情報保護を求めます。詳しくは<a href="https://www.apple.com/legal/privacy/">Appleプライバシーポリシー</a>、<a href="https://policies.google.com/privacy">Googleプライバシーポリシー</a>、<a href="https://docs.github.com/ja/site-policy/privacy-policies/github-privacy-statement">GitHubのプライバシーに関する声明</a>をご確認ください。</p>
     <h2>本サイトについて</h2><p>このサイトはGitHub Pagesで配信する静的ページで、独自のアクセス解析、広告、Cookieを設置していません。ホスティング事業者であるGitHubがウェブアクセスに関する情報を処理する場合があります。GitHubの<a href="https://docs.github.com/ja/site-policy/privacy-policies/github-privacy-statement">プライバシーに関する声明</a>をご確認ください。</p>
-    <h2>ポリシーの変更</h2><p>アプリの機能、SDK、データの利用方法を変更した場合、このページを更新します。重要な変更はアプリ内または公開ページでお知らせします。</p>
-    <h2>公開前の確認事項</h2><ul><li>運営者名・問い合わせ先・発効日を設定する。</li><li>App Store提出ビルドのSDKと広告設定を確認し、App Privacy回答と一致させる。</li><li>UMPの地域別同意画面、ATT要否、AdMob本番配信条件を確認する。</li><li>バックアップ、保存期間、削除、問い合わせ対応の運用を運営者が確定する。</li></ul>
+    <h2>ポリシーの変更</h2><p>アプリの機能、利用するSDK、または情報の利用方法を変更した場合、このページを更新します。重要な変更はアプリ内または本サイトでお知らせします。変更後のポリシーは、本ページに掲載した発効日から適用します。</p>
   </main>
   <footer><div class="footer-inner"><span>© Unfold</span><span class="footer-links"><a href="../">ホーム</a><a href="../support/">サポート</a></span></div></footer>
 </body>

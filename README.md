@@ -4,15 +4,15 @@ Unfold iOSアプリの日本語サポートページとプライバシーポリ�
 
 HTML/CSS/JavaScriptのみで動作し、外部ライブラリ、分析SDK、広告タグ、ビルドサービスは使いません。
 
-## 公開前に設定する項目
+## 公開情報
 
-`config.js` の次の値を実際の情報に変更してください。空のままではページに公開前TODOが表示されます。
+`config.js` でサポートページとプライバシーポリシーの共通表示を管理します。
 
 - `supportEmail`: 問い合わせ先メールアドレス
-- `operatorName`: 運営者名
+- `operatorName`: 運営者表示名
 - `effectiveDate`: ポリシー発効日
 
-広告SDKの設定、UMP同意、ATT要否、App Store ConnectのApp Privacy回答は、提出するアプリビルドと照合してからポリシーを公開してください。未確認の事項はページ内TODOに残しています。
+アプリの機能、広告SDK、同意画面、App Store ConnectのApp Privacy回答を変更する場合は、提出するアプリビルドとプライバシーポリシーを照合して更新してください。
 
 ## GitHub Pagesで公開する
 

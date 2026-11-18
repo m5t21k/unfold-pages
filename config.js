@@ -1,6 +1,6 @@
-/* 公開前に運営者情報を設定してください。値が空の場合はページ上にTODOを表示します。 */
+/* サポートページとプライバシーポリシーで共通して表示する公開情報です。 */
 window.UNFOLD_SITE_CONFIG = {
-  supportEmail: "",
-  operatorName: "",
-  effectiveDate: "",
+  supportEmail: "unfold.app.info@gmail.com",
+  operatorName: "Unfold",
+  effectiveDate: "2026年11月18日",
 };
